@@ -5,6 +5,8 @@ local LocalPlayer = game:GetService("Players").LocalPlayer
 local Mouse = LocalPlayer:GetMouse()
 local HttpService = game:GetService("HttpService")
 
+local ProtectGui = protectgui or (syn and syn.protect_gui) or (function() end);
+
 local OrionLib = {
     Elements = {},
     ThemeObjects = {},
@@ -45,6 +47,7 @@ local function GetIcon(IconName)
 end   
 
 local Orion = Instance.new("ScreenGui")
+ProtectGui(Orion);
 Orion.Name = "Orion"
 if syn then
 	syn.protect_gui(Orion)
