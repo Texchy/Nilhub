@@ -47,7 +47,7 @@ local function GetIcon(IconName)
 end   
 
 local Orion = Instance.new("ScreenGui")
-ProtectGui(Orion); or protectgui(Orion);
+ProtectGui(Orion);
 Orion.Name = "Sigma"
 if syn then
 	syn.protect_gui(Orion)
