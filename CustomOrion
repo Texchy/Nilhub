@@ -5,26 +5,24 @@ local LocalPlayer = game:GetService("Players").LocalPlayer
 local Mouse = LocalPlayer:GetMouse()
 local HttpService = game:GetService("HttpService")
 
-local ProtectGui = protectgui or (syn and syn.protect_gui) or (function() end);
-
 local OrionLib = {
-    Elements = {},
-    ThemeObjects = {},
-    Connections = {},
-    Flags = {},
-    Themes = {
-        Default = {
-            Main = Color3.fromRGB(30, 30, 40), -- Slightly lighter
-            Second = Color3.fromRGB(40, 40, 50), -- Slightly lighter
-            Stroke = Color3.fromRGB(45, 45, 55), -- Slightly lighter
-            Divider = Color3.fromRGB(70, 70, 80), -- Slightly lighter
-            Text = Color3.fromRGB(255, 255, 255), -- Pure white for better contrast
-            TextDark = Color3.fromRGB(180, 180, 180) -- Slightly lighter
-        }
-    },
-    SelectedTheme = "Default",
-    Folder = nil,
-    SaveCfg = false
+	Elements = {},
+	ThemeObjects = {},
+	Connections = {},
+	Flags = {},
+	Themes = {
+		Default = {
+			Main = Color3.fromRGB(25, 25, 25),
+			Second = Color3.fromRGB(32, 32, 32),
+			Stroke = Color3.fromRGB(60, 60, 60),
+			Divider = Color3.fromRGB(60, 60, 60),
+			Text = Color3.fromRGB(240, 240, 240),
+			TextDark = Color3.fromRGB(150, 150, 150),
+		},
+	},
+	SelectedTheme = "Default",
+	Folder = nil,
+	SaveCfg = false,
 }
 
 --Feather Icons https://github.com/evoincorp/lucideblox/tree/master/src/modules/util - Created by 7kayoh
@@ -47,8 +45,7 @@ local function GetIcon(IconName)
 end   
 
 local Orion = Instance.new("ScreenGui")
-ProtectGui(Orion);
-Orion.Name = "Sigma"
+Orion.Name = "Orion"
 if syn then
 	syn.protect_gui(Orion)
 	Orion.Parent = game.CoreGui
@@ -1596,7 +1593,7 @@ function OrionLib:MakeWindow(WindowConfig)
 					if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
 						if HueInput then
 							HueInput:Disconnect()
-						end;
+						end
 
 						HueInput = AddConnection(RunService.RenderStepped, function()
 							local HueY = (math.clamp(Mouse.Y - Hue.AbsolutePosition.Y, 0, Hue.AbsoluteSize.Y) / Hue.AbsoluteSize.Y)
