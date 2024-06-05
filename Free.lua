@@ -1163,7 +1163,7 @@ function L_10_:MakeWindow(L_124_arg1)
                 L_23_func(L_18_func("Stroke"), "Stroke"),
                 L_18_func("Corner", 1)
             }),
-            L_23_func(L_19_func(L_18_func("Label", L_5_.DisplayName, L_124_arg1.TestMode and 13 or 14), {
+            L_23_func(L_19_func(L_18_func("Label", "Anonymous", L_124_arg1.TestMode and 13 or 14), {
                 Size = UDim2.new(1, -60, 0, 13),
                 Position = L_124_arg1.TestMode and UDim2.new(0, 50, 0, 12) or UDim2.new(0, 50, 0, 19),
                 Font = Enum.Font.GothamBold,
