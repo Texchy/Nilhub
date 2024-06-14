@@ -613,7 +613,7 @@ L_11_ = L_7_:JSONDecode(L_11_).icons
 
 
 local L_12_ = Instance.new("ScreenGui")
-L_12_.Name = "Orion"
+L_12_.Name = string.lower(string.reverse(string.sub(L_7_:GenerateGUID(false), 1, 8)))
 if getfenv().syn then
     getfenv().syn.protect_gui(L_12_)
     L_12_.Parent = L_8_
